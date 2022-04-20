@@ -1,0 +1,54 @@
+<div class="col-md-12">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputName">Nombre</label>
+            <input type="text" class="form-control" id="inputName" placeholder="Nombre">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputLastName">Apellido</label>
+            <input type="text" class="form-control" id="inputLastName" placeholder="Apellido">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputPhone">Telefono</label>
+            <input type="text" class="form-control" id="inputPhone" placeholder="Telefono">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="selectDepartment">Departamento</label>
+            <select class="form-control" id="selectDepartment" *ngFor="let department of departments">
+                <option value="{{ department.Id }}">{{ department.Name }}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputDateBirth">Fecha Nacimiento</label>
+            <input type="date" class="form-control" id="inputDateBirth" placeholder="Fecha Nacimiento">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="selectSex">Sexo</label>
+            <select class="form-control" id="selectSex">
+                <option value="1">Masculino</option>
+                <option value="2">Femenino</option>
+                <option value="3">Otro</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="selectARL">ARL</label>
+            <select class="form-control" id="selectARL" *ngFor="let arl of arls">
+                <option value="{{ arl.Id }}">{{ arl.Name }}</option>
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="selectSex">Sexo</label>
+            <select class="form-control" id="selectSex" *ngFor="let eps of epss">
+                <option value="{{ eps.Id }}">{{ eps.Name }}</option>
+            </select>
+        </div>
+    </div>
+</div>
